@@ -1,14 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>National Melodies</title>
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
+
   <body>
-    <header>
-      <h1>Test Title</h1>
-    </header>
+    <h1>National Melodies</h1>
+
+    <div class="button-container">
+      <button
+        name="france"
+        onclick="playMelody('./assets/Edith_Piaf-La_Vie_En_Rose_fr.mp3', 'France')"
+      >
+        <img src="./images/play.svg" />
+      </button>
+      <button
+        name="germany"
+        onclick="playMelody('./assets/NENA_99-Luftballons_de.mp3', 'Germany')"
+      >
+        <img src="./images/play.svg" />
+      </button>
+      <button
+        name="poland"
+        onclick="playMelody('./assets/Brathanki-Czerwone-korale_pl.mp3', 'Poland')"
+      >
+        <img src="./images/play.svg" />
+      </button>
+      <button
+        name="england"
+        onclick="playMelody('./assets/The_Beatles-Yesterday_uk.mp3', 'England')"
+      >
+        <img src="./images/play.svg" />
+      </button>
+      <button
+        name="ukraine"
+        onclick="playMelody('./assets/Sofia_Rotaru-Chervona_Ruta_ua.mp3', 'Ukraine')"
+      >
+        <img src="./images/play.svg" />
+      </button>
+    </div>
+
+    <div class="flag-container">
+      <img
+        src="./images/ua.svg"
+        class="flag"
+        alt="ukraine"
+        onclick="guessCountry('Ukraine')"
+      />
+      <img
+        src="./images/pl.svg"
+        class="flag"
+        alt="poland"
+        onclick="guessCountry('Poland')"
+      />
+      <img
+        src="./images/gb.svg"
+        class="flag"
+        alt="england"
+        onclick="guessCountry('England')"
+        id="england"
+      />
+      <img
+        src="./images/fr.svg"
+        class="flag"
+        alt="france"
+        onclick="guessCountry('France')"
+      />
+      <img
+        src="./images/de.svg"
+        class="flag"
+        alt="germany"
+        onclick="guessCountry('Germany')"
+      />
+    </div>
+
+    <div id="customPopup" class="popup">
+      <span class="popup-content" id="popupContent"></span>
+      <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
