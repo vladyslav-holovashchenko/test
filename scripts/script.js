@@ -72,3 +72,14 @@ const closePopup = () => {
 const disableElement = (selector) => {
   document.querySelector(selector).style.pointerEvents = 'none'
 }
+
+let currentImgType = 'jpg'
+const changePics = document.getElementById('changePics')
+changePics.addEventListener('click', () => {
+  currentImgType = currentImgType === 'jpg' ? 'svg' : 'jpg'
+  const pics = document.getElementsByClassName('flag')
+  const countries = ['ua', 'pl', 'gb', 'fr', 'de']
+  for (let i = 0; i < pics.length; i++) {
+    pics[i].src = `../images/${countries[i]}.${currentImgType}`
+  }
+})
