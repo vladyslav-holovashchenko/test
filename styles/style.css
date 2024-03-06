@@ -14,15 +14,15 @@ h1 {
 .flag-container {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
+  gap: 10px;
   justify-content: space-around;
   align-items: center;
   margin-top: 20px;
 }
 
 .flag {
-  width: 100%;
-  max-width: 280px;
+  height: 100%;
+  max-height: 200px;
   cursor: pointer;
   border-radius: 10px;
   box-shadow: 0px 10px 18px -7px rgba(0, 0, 0, 0.75);
@@ -36,8 +36,6 @@ h1 {
 #england {
   grid-column: span 2;
   justify-self: center;
-  width: 100%;
-  max-width: 320px;
 }
 
 .button-container {
@@ -101,6 +99,24 @@ h1 {
 
 .popup button:hover {
   background-color: #45a049;
+}
+
+#changePics {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#changePics:hover {
+  background-color: #2980b9;
 }
 
 @media only screen and (max-width: 600px) {
