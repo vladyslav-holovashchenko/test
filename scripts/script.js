@@ -80,6 +80,6 @@ changePics.addEventListener('click', () => {
   const pics = document.getElementsByClassName('flag')
   const countries = ['ua', 'pl', 'gb', 'fr', 'de']
   for (let i = 0; i < pics.length; i++) {
-    pics[i].src = `../images/${countries[i]}.${currentImgType}`
+    pics[i].src = `../test/images/${countries[i]}.${currentImgType}`
   }
 })
